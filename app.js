@@ -21,7 +21,6 @@ app.get('/', (req, res, next) => {
 
 app.get('/:id', (req, res, next) => {
     const item = findById(req.params.id)
-
     if (!item) {
         res.status(404).json({
                 error: {
@@ -31,7 +30,7 @@ app.get('/:id', (req, res, next) => {
         return
     }
     res.json({ data: item })   
-    })
+})
 
-    const listener = () => console.log('Listening on port ' + port)
-    app.listen(port, listener)
+const listener = () => console.log('Listening on port ' + port)
+app.listen(port, listener)
