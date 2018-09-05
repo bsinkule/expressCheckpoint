@@ -4,9 +4,9 @@ const cors = require('cors')
 const port = process.env.PORT || 5000
 const data = require('./data.json')
 
-function findById(ID) {
+function findById(id) {
     for (let i=0; i<data.length; i++) {
-        if (data[i].ID === +ID) {
+        if (data[i].id === +id) {
             return data[i]
         }
     }
