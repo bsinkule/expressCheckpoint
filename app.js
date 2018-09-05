@@ -24,7 +24,7 @@ app.get('/:id', (req, res, next) => {
     if (!item) {
         res.status(404).json({
                 error: {
-                    message: "No record found!"
+                    message: 'No record found!'
                 } 
             })
         return
